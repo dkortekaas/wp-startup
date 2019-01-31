@@ -1,0 +1,31 @@
+﻿.pagination {
+    &--centered {
+        justify-content: center;
+    }
+
+    &__item {
+        margin:3px;
+    }
+
+    &__link {
+        display: inline-block;
+        min-width: 30px;
+        text-align: center;
+        color: rgba(0,0,0,1);
+        text-decoration: none;
+        background: rgba(255,255,255,0.3);
+
+        &:hover {
+            background: rgba(255,255,255,1);
+        }
+
+        &--current {
+            font-weight: 700;
+        }
+
+        &--disabled {
+            color: rgba(0,0,0,0.2);
+            cursor: default;
+        }
+    }
+}

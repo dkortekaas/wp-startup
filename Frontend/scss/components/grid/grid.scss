@@ -1,0 +1,90 @@
+﻿
+.g- {
+    // flexbox fallback version for non grid browsers
+    &row {
+        display: flex;
+        flex-wrap: wrap;
+        width: initial;
+        margin: -1em -#{$gutter / 2} 1em -#{$gutter / 2};
+        justify-content: space-around;
+    }
+
+    &size-1,
+    &size-2,
+    &size-3,
+    &size-4,
+    &size-5,
+    &size-6,
+    &size-7,
+    &size-8,
+    &size-9,
+    &size-10,
+    &size-11,
+    &size-12 {
+        max-width: $g-size;
+        flex-basis: $g-size;
+        padding: $gutter / 2;
+    }
+
+    &size-2,
+    &size-3,
+    &size-4,
+    &size-5,
+    &size-6 {
+        max-width: 50%;
+        flex-basis: 50%;
+    }
+
+    &size-7,
+    &size-8,
+    &size-9,
+    &size-10,
+    &size-11,
+    &size-12 {
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+
+    // grid version
+    @supports (display:grid) {
+        &row {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-gap: $gutter;
+            margin: initial;
+        }
+
+        &size-1,
+        &size-2,
+        &size-3,
+        &size-4,
+        &size-5,
+        &size-6,
+        &size-7,
+        &size-8,
+        &size-9,
+        &size-10,
+        &size-11,
+        &size-12 {
+            padding: initial;
+            max-width: none;
+        }
+
+        &size-2,
+        &size-3,
+        &size-4,
+        &size-5,
+        &size-6 {
+            grid-column: span 6;
+        }
+
+        &size-7,
+        &size-8,
+        &size-9,
+        &size-10,
+        &size-11,
+        &size-12 {
+            grid-column: span 12;
+        }
+    }
+}

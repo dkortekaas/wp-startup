@@ -1,0 +1,29 @@
+﻿
+@mixin aspect-ratio($width, $height, $childelement) {
+    position: relative;
+
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+
+    > #{$childelement} {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.video-player {
+    @include aspect-ratio(16, 9, '.video-player__embed');
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+

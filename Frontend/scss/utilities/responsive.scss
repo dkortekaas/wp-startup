@@ -1,0 +1,22 @@
+﻿
+.img-responsive {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    padding: 0;
+    overflow: hidden;
+
+    iframe, embed, object {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        border: 0;
+    }
+}

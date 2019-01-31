@@ -1,0 +1,31 @@
+﻿.icon {
+    width: $base-unit;
+    height: $base-unit;
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--flip {
+        transform: scaleX(-1);
+        filter: FlipH;
+    }
+
+    &--m {
+        width: $base-unit*2;
+        height: $base-unit*2;
+    }
+
+    &--l {
+        width: $base-unit*3;
+        height: $base-unit*3;
+    }
+
+    &--xl {
+        width: $base-unit*4;
+        height: $base-unit*4;
+    }
+
+}

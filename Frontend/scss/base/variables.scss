@@ -1,0 +1,26 @@
+﻿
+$base-unit: 12px;
+$base-font-size: 16px;
+$base-line-height: 1.5;
+$base-leading: $base-font-size * $base-line-height;
+
+$font-sans-serif: sans-serif;
+$font-serif: serif;
+
+$vp-medium: 768px;
+$vp-medium-container: 718px;
+$vp-large: 1200px;
+$vp-large-container: 1152px;
+
+$navigation-bar-height: 70px;
+
+$g-size: 8.33333333%;
+$gutter: $base-unit;
+
+$z-header:90;
+$z-nav:80;
+$z-main:60;
+$z-footer:50;
+
+$text-color: #333;
+$primary-color: #ed1c24;

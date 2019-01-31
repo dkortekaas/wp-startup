@@ -1,0 +1,34 @@
+﻿.show {
+    display: block !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+@media (max-width: $vp-medium - 1) {
+    .hidden-s {
+        display: none !important;
+    }
+}
+
+@media (min-width: $vp-medium) {
+    .show-s {
+        display: none !important;
+    }
+
+    .hidden-m {
+        display: none !important;
+    }
+}
+
+@media (min-width: $vp-large) {
+    .show-m {
+        display: none !important;
+    }
+
+    .hidden-l {
+        display: none !important;
+    }
+}

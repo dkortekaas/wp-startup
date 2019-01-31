@@ -1,0 +1,138 @@
+﻿
+.site-nav {
+
+    @media(max-width: #{$vp-medium} - 1) {
+        position: fixed;
+        z-index: 900;
+        background: #fff;
+        left: 0;
+        top: 0;
+        width: 100%;
+        min-height: $navigation-bar-height;
+
+
+
+        &__container {
+            display: none;
+            width: 100%;
+            position: fixed;
+            height: calc(100vh - #{$navigation-bar-height});
+            left: 0;
+            top: $navigation-bar-height;
+            overflow-y: scroll;
+        }
+
+        &__bar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: rgba(0,0,0, 0.2);
+            width: 100%;
+            height: $navigation-bar-height;
+        }
+
+        &__hamburger {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        &--active {
+            height: 100vh;
+            overflow-y: scroll;
+
+            .site-nav__container {
+                display: block;
+            }
+        }
+
+
+
+        &__menu {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-content: stretch;
+            align-items: stretch;
+
+            &-item {
+                position: relative;
+                margin: 0;
+
+                a {
+                    font-size: 24px;
+                    display: block;
+                    padding: 15px;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+
+                &:hover {
+                    background: #fff;
+                }
+            }
+        }
+
+        &__sub-menu {
+            display: flex;
+            position: fixed;
+            left: 100vw;
+            top: $navigation-bar-height;
+            height: calc(100vh - #{$navigation-bar-height});
+            z-index: 1000;
+            transition: left 0.2s ease-in-out, opacity 0.2s ease-in-out;
+            background: #fff;
+            overflow-y: scroll;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-content: stretch;
+            align-items: stretch;
+            width: 100%;
+            opacity: 0;
+
+            &-toggle,
+            &-toggle-reverse {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                font-size: 30px;
+                font-weight: 700;
+                width: 66px;
+                height: 66px;
+                background: rgba(0,0,0, 0.2);
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            &--active {
+                left: 0;
+                opacity: 1;
+            }
+
+            &-item {
+                position: relative;
+                margin: 0;
+
+                &__heading {
+                    background: #fff;
+                    border-bottom: 2px solid #000;
+                }
+            }
+        }
+
+        &__no-overflow {
+            overflow-y: hidden !important;
+        }
+    }
+
+    a {
+        color: $text-color;
+        text-decoration: none;
+    }
+}

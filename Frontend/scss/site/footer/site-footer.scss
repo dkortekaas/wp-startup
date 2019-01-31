@@ -1,0 +1,13 @@
+﻿
+.site-footer {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: $z-footer;
+    font-size:85%;
+    .site-container {
+        border-top: 1px solid #ddd;
+        padding-top: 50px;
+        margin-top: 50px;
+    }
+}
