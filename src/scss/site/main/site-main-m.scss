@@ -1,0 +1,15 @@
+﻿.site-main {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 auto;
+
+    &__article {
+        flex: 1;
+        width:100%;
+    }
+
+    &__aside {
+        width: 200px;
+        margin-right: 30px;
+    }
+}

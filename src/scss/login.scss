@@ -1,0 +1,104 @@
+/******************************************************************
+
+Stylesheet: Login Stylesheet
+
+This stylesheet is loaded is only on the login page. This way you can style
+the login page. It won't affect any other page, admin or front-end.
+
+Make sure functions/login.php is activated in your functions.php file.
+
+This stylesheet is turned off by default.
+
+For more info, check out the codex:
+http://codex.wordpress.org/Creating_Admin_Themes
+
+******************************************************************/
+
+body.login {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+    box-sizing: border-box;
+
+
+
+    top: 0;
+    left: 0;
+    margin: 0!important;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    overflow-y: auto;
+    background-color: #1d1333;
+}
+
+#login {
+	background: #fff;
+    padding: 25px;
+    width: 500px;
+}
+
+// Change the login logo
+.login {
+	h1 a {
+		// background: url(../images/login-logo.png) no-repeat top center;
+		// width: 326px;
+		// height: 67px;
+		// text-indent: -9999px;
+		// overflow: hidden;
+		// padding-bottom: 15px;
+		// display: block;
+
+		position: absolute;
+		top: 22px;
+		left: 25px;
+		z-index: 1;
+	}
+
+	form {
+		margin-top: 0;
+		box-shadow: none;
+
+		label {
+			font-weight: 700;
+		}
+
+		.input {
+			height: 36px;
+			padding-left: 10px;
+			padding-right: 10px;
+			background-color: #fff;
+			border: 1px solid #bbbabf;
+			transition: border .2s linear,box-shadow .2s linear;
+			
+			&:focus {
+				border-color: none;
+				outline: 0;
+				outline: none\9;
+			}
+		}
+	}
+}
+
+// Messages
+.login #login_error, .login .message, .login .success {
+    border-left: none;;
+    padding: 12px;
+    margin-left: 0;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: none;
+}
+
+
+// Login Button Style
+#wp-submit {
+	
+}

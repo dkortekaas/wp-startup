@@ -1,0 +1,7 @@
+@media (min-width: 1200px) {
+  .site-main {
+    display: flex;
+    flex: 1 0 auto;
+    width: 1152px; }
+  .site-container {
+    width: 1152px; } }
