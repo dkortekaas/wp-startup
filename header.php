@@ -21,38 +21,32 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> >
+<body <?php body_class(); ?>>
 
-    <header class="site-header" role="banner">
-        <div class="container">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-logo">
-                <?php
-			the_custom_logo();
-			?>
-            </a>
-			<?php
-				wpstartup_top_nav(); ?>
+    <header class="site-header">
+        <div class="site-container">
+
+            <div class="site-nav">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-logo" title="Terug naar home">
+                    <?php the_custom_logo(); ?>
+                </a>
+                <nav role="navigation">
+                    <div class="site-nav__bar">
+                        <button class="site-nav__hamburger hamburger hamburger--slider hidden-l" type="button"
+                            aria-label="Menu" aria-controls="site-nav">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="site-nav__container site-nav__overflow" id="site-nav">
+                        <?php wpstartup_main_nav(); ?>
+                    </div>
+                </nav>
+
+
+            </div>
         </div>
     </header>
 
-    <nav class="site-nav js-load-siteNav" role="navigation">
-        <div class="container">
-            <div class="site-nav__menu site-nav__panel js-siteNav-panel" data-level="1">
-                <a href="/" class="site-logo">
-				<?php
-				the_custom_logo();
-				?>
-                </a>
-				<?php wpstartup_main_nav(); ?>
-            </div>
-        </div>
-        <div class="site-nav__search site-nav__panel js-siteNav-panel" data-slide-direction="right">
-            <div class="container">
-                Searchform
-
-            </div>
-        </div>
-
-    </nav>
-
-	<main class="site-main" role="main" itemscope itemprop="mainContentOfPage">
+    <main class="site-main" role="main" itemscope itemprop="mainContentOfPage">

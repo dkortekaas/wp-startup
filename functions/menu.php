@@ -16,7 +16,7 @@ function wpstartup_main_nav() {
 		//'container_class' => 'nav',
 		//'container_id'    => 'main',
 		'menu_id'			=> 'main-nav',					// Adding custom nav id
-		'menu_class'      => 'link-list', // Adding custom nav class
+		'menu_class'      => 'site-nav__menu nav-list', // Adding custom nav class
 		//'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
 		'depth'				=> 5,	// Limit the depth of the nav
 		'fallback_cb'     => false,  // Fallback function (see below)
