@@ -17,7 +17,8 @@ get_header();
 
 <div class="main-body">
 
-    <div class="g-layout" data-template="Column Layout">
+    <div class="g-layout">
+
         <div class="g-section g-size-8">
         <?php
 		if ( have_posts() ) :
@@ -46,10 +47,13 @@ get_header();
 		endif;
 		?>
         </div>
+
+		<?php
+		get_sidebar();
+		?>
     </div>
 
 </div>
 
 <?php
-get_sidebar();
 get_footer();

@@ -27,9 +27,11 @@
         <div class="site-container">
 
             <div class="site-nav">
+
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-logo" title="Terug naar home">
                     <?php the_custom_logo(); ?>
                 </a>
+
                 <nav role="navigation">
                     <div class="site-nav__bar">
                         <button class="site-nav__hamburger hamburger hamburger--slider hidden-l" type="button"
@@ -44,8 +46,8 @@
                     </div>
                 </nav>
 
-
             </div>
+
         </div>
     </header>
 

@@ -10,8 +10,10 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="main-body">
+	
+	<div class="g-layout">
+		<div class="g-section g-size-8">
 
 		<?php
 		while ( have_posts() ) :
@@ -29,9 +31,14 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</div>
+
+		<?php
+		get_sidebar();
+		?>
+	</div>
+
+</div>
 
 <?php
-get_sidebar();
 get_footer();
